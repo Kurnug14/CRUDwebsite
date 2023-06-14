@@ -7,7 +7,6 @@
     //tabelle für die momentane session festhalten um diese erfolgreich zu überreichen
     session_start();
     $_SESSION['table'] = $table;
-    echo $table;
 
     /*//ID Feststellen
     $sqlid = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '".$table."' LIMIT 1;";
@@ -39,7 +38,7 @@
         $col = count($arrHead);
 
         for($i = 0; $i <= $col-1; $i++){
-        echo "<input type='text' name='".$arrHead[$i]."' placeholder='".$arrHead[$i]."'>";
+        echo "<input type='text' name='".$arrHead[$i]."' placeholder='".$arrHead[$i]."'> ";
         }
     echo "<input type='submit' value='Change Data'>
     <form action='includes/dbfunctions.php' method='post' >";

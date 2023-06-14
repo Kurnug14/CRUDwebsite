@@ -2,7 +2,7 @@
     include('includes/dbaccess.php');
     include_once 'index.php';
 
-    echo    '<table>
+    echo    '<div class="output"><div class="alignment"><table>
             <thead>
             <tr>';
             $table=$_POST["tables"];

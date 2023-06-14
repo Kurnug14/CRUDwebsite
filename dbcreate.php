@@ -4,7 +4,6 @@
     include_once 'dbread.php';
     
     $tables=$_POST["tables"];
-    print_r($table);
     //tabelle für die momentane session festhalten um diese erfolgreich zu überreichen
     session_start();
     $_SESSION['table'] = $table;
@@ -39,7 +38,7 @@
         $col = count($arrHead);
 
         for($i = 1; $i <= $col-1; $i++){
-        echo "<input type='text' name='".$arrHead[$i]."' placeholder='".$arrHead[$i]."'>";
+        echo "<input type='text' name='".$arrHead[$i]."' placeholder='".$arrHead[$i]."'> ";
         }
     echo "<input type='submit' value='Create data'>
     <form action='includes/dbfunctions.php' method='post' >";
