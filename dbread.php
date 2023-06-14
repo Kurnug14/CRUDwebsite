@@ -5,7 +5,16 @@
     echo    '<div class="output"><div class="alignment"><table>
             <thead>
             <tr>';
-            $table=$_POST["tables"];
+            ini_set('display_errors', 0);
+            if("" == trim($_POST['tables'])){
+                session_start();
+                $table = $_SESSION['table'];
+             }
+             else {
+                $table=$_POST["tables"];
+             }
+             ini_set('display_errors', 1);
+
             
                 //Attribute abfragen
                 $hsql="SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '". $table . "';";

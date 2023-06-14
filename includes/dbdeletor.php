@@ -16,3 +16,4 @@
 
     $statement=$pdo->prepare($sqlDelete);
     $statement->execute();
+    header('Location: ../dbcreate.php');

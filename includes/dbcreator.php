@@ -48,7 +48,7 @@
         }
     $statement=$pdo->prepare($sqlValues);
     $statement->execute();
-    header('Location: ../dbcreate.php');
+    header('Location: ../dbread.php');
         //echo $sqlValues;
 
     /*//SQL Code generieren

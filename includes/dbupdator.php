@@ -46,3 +46,4 @@
     echo $sqlUpdates;
     $statement=$pdo->prepare($sqlUpdates);
     $statement->execute();
+    header('Location: ../dbcreate.php');

@@ -5,7 +5,9 @@
     
     $tables=$_POST["tables"];
     //tabelle für die momentane session festhalten um diese erfolgreich zu überreichen
+    ini_set('display_errors', 0);
     session_start();
+    ini_set('display_errors', 1);
     $_SESSION['table'] = $table;
 
     /*//ID Feststellen
